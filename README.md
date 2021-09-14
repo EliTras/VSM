@@ -1,2 +1,2 @@
 # VSM
-Volcano and Seismic source Modeling
+Volcanic and Seismic source Modeling
