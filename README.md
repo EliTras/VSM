@@ -1,5 +1,6 @@
 # VSM
-Volcanic and Seismic source Modeling
+Volcanic and Seismic source Modelling (VSM) is an open source Python tool to perform geodetic data inversion.
+Currently submitted.
 
 ## COMING SOON :-)
 
