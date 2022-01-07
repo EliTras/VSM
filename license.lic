@@ -1,0 +1,60 @@
+*******************************************************************************
+VSM
+
+   Volcanic and Seismic source Modelling
+
+   Author:  Elisa Trasatti, elisa.trasatti@ingv.it
+   Istituto Nazionale di Geofisica e Vulcanologia - Rome (Italy)
+
+   Thanks to: M. Sambridge (NA inversion)
+              N. Piana Agostinetti (first fortran version)
+              And others for python codes (from GitHub and PyPI)
+
+   Created:      2007 
+   Last update:  January 2022
+
+   License:  E. Trasatti, covered by GNU-GPL License
+
+   Redistribution and use in source and binary forms, with or without
+   modification, are permitted provided that the following conditions are met:
+
+      * Redistributions of source code must retain the above copyright 
+        notice, this list of conditions and the following disclaimer.
+      * Redistributions in binary form must reproduce the above copyright 
+ 	notice, this list of conditions and the following disclaimer in 
+ 	the documentation and/or other materials provided with the distribution.
+
+   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+   ARE DISCLAIMED. IN NO EVENT SHALL THE COPY RIGHT OWNER OR CONTRIBUTORS BE
+   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+   POSSIBILITY OF SUCH DAMAGE.
+*******************************************************************************
+
+   BIBLIOGRAPHY
+
+   Davis, P.M. (1986). Surface deformation due to inflation of an arbitrarily 
+       oriented triaxial ellipsoidal cavity in an elastic half-space, with
+       reference to Kilauea volcano, Hawaii, J. Geophys. Res. 91, 7429-7438.
+   Fialko, Y. Khazan, Y., and Simons, M. (2001). Deformation due to a  
+       pressurized horizontal circular crack in an elastic half-space, with 
+       applications to volcano geodesy. Geophys. J. Int. 146(1), 181-190.
+   McTigue, D.F. (1987). Elastic stress and deformation near a finite spherical 
+       magma body: resolution of the point-source paradox. J. Geophys. Res. 92, 
+       12931-12940.
+   Mogi, K. (1958). Relation between the eruptions of various volcanoes and the
+       deformations of the ground surfaces around them. Bull. Earth Res. Inst. 
+       36, 99-134.
+   Sambridge, M. (1999). Geophysical inversion with a Neighbourhood Algorithm -
+       Searching a parameter space. Geophys. J. Int. 138, 479-494.
+   Okada, Y. (1985). Surface deformation due to shear and tensile faults in a 
+       half-space. B. Seismol. Soc. Am. 75, 1135-1154. 
+   Yang, X., Davis, P.M., and Dieterich, J.H. (1988). Deformation from inflation
+       of a dippint finite prolate spheroid in an elastic half-space as a model
+       for volcanic stressing. J. Geophys. Res. 93, 4249-4257.
