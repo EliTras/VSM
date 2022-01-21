@@ -4,6 +4,6 @@ Currently submitted.
 
 ## COMING SOON :-)
 
-Tests are available in https://github.com/EliTras/VSM_test
+Tests available at https://github.com/EliTras/VSM_test
 
 For any inquires, please write to elisa.trasatti@ingv.it
