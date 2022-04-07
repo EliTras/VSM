@@ -1,5 +1,5 @@
 
-[VSM_logo](https://user-images.githubusercontent.com/66011901/162179176-deba206a-3f3c-406d-8b45-d10cac4c9448.gif)
+https://github.com/EliTras/VSM/blob/66ba1e5e144e90507d025cb6785f226a270c7f14/VSM_logo.gif
 
 # VSM - Volcanic and Seismic source Modelling!
 
