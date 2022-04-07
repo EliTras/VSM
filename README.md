@@ -28,8 +28,6 @@ Sampling algorithms available
 VSM can be executed as Python script, in Jupyter Notebook environments or by its Graphical User Interface.
 Tests available at https://github.com/EliTras/VSM_test
 
-Currently submitted for publication.
-
-Cite as: 
+Currently submitted for publication. Until published cite as: 
 
 For any inquires, please write to elisa.trasatti@ingv.it
