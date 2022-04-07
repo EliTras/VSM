@@ -1,7 +1,7 @@
+![VSM_logo](https://user-images.githubusercontent.com/66011901/162179624-ff0e75bc-a25a-4775-9d4a-f29850407f16.gif)
 
-https://github.com/EliTras/VSM/blob/66ba1e5e144e90507d025cb6785f226a270c7f14/VSM_logo.gif
 
-# VSM - Volcanic and Seismic source Modelling!
+# Volcanic and Seismic source Modelling - VSM
 
 Volcanic and Seismic source Modelling (VSM) is an open source Python tool to model ground deformation detected by satellite and terrestrial geodetic techniques.
 
@@ -18,8 +18,8 @@ Input datasets supported
 - GNSS
 - levelling
 - Electro-optical Distance Measuring
-- tiltmeters
-- strainmeters
+- tilt
+- strain
 
 Sampling algorithms available
 - Global optimization algorithm based on the Voronoi cells (Neighbourhood Algorithm - NA)
