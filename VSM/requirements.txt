@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+corner
+emcee
+pyshp
+jupyterlab
+cartopy
