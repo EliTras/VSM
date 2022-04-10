@@ -1,4 +1,4 @@
-![VSM_logo](https://user-images.githubusercontent.com/66011901/162179624-ff0e75bc-a25a-4775-9d4a-f29850407f16.gif)
+![VSM_logo](https://github.com/EliTras/VSM/blob/main/VSM/VSM_logo.gif)
 
 
 # Volcanic and Seismic source Modelling - VSM
