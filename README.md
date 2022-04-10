@@ -21,7 +21,7 @@ Input datasets supported
 - tilt
 - strain
 
-Sampling algorithms available
+Sampling algorithms
 - Global optimization algorithm based on the Voronoi cells (Neighbourhood Algorithm - NA)
 - Probabilistic approach to parameters estimation based on the Bayes theorem (Bayesian Inference - BI)
 
