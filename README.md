@@ -8,16 +8,16 @@ Volcanic and Seismic source Modelling (VSM) is an open source Python tool to mod
 Forward analytical models available and freely combinable
 - isotropic point-source
 - finite volume sphere
+- penny-shaped crack
 - spheroid
-- ellipsoid
-- fault/dike
-- sill-like
+- moment tensor source
+- rectangular dislocation
 
-Input datasets supported
+Input data supported
 - interferometric SAR
 - GNSS
 - levelling
-- Electro-optical Distance Measuring
+- electronic distance measurements
 - tilt
 - strain
 
