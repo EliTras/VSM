@@ -13,7 +13,7 @@ VSM - Version 1.0
               And others for python codes (from GitHub and PyPI)
 
    Created:      2007 
-   Last update:  April 2022
+   Last update:  May 2022
 
    License:  E. Trasatti, covered by GNU-GPL License
 
@@ -459,7 +459,7 @@ def source_info(argument):
                 param_l = ['xcen','ycen','depth','radius','dP_mu'],
                 dpars = None
                 )
-    sill = dict(index = 2,
+    fial = dict(index = 2,
                 name  = 'Penny-shaped crack (Fialko et al., 2001)',
                 param_n = 5,
                 param_l = ['xcen','ycen','depth','radius','dP_mu'],
@@ -472,13 +472,13 @@ def source_info(argument):
                 dpars = None
                 )
     davi = dict(index = 4,
-                name  = 'Ellipsoid Point Source (Davis, 1986)',
+                name  = 'Moment Tensor Point Source (Davis, 1986)',
                 param_n = 9,
                 param_l = ['xcen','ycen','depth','Pxx','Pyy','Pzz','Pxy','Pyz','Pzx'],
                 dpars = None
                 )
     okad = dict(index = 5,
-                name  = 'Fault or Dike (Okada, 1985)',
+                name  = 'Rectangular Dislocation (Okada, 1985)',
                 param_n = 10,
                 param_l = ['xtlc','ytlc','dtlc','length','width','strike','dip','param1','param2','opening'],
                 dpars = None
@@ -486,7 +486,7 @@ def source_info(argument):
     sources = {
         0: mogi,
         1: mctg,
-        2: sill,
+        2: fial,
         3: yang,
         4: davi,
         5: okad
@@ -704,7 +704,7 @@ def synth(params):
             if(type_sorg == 1):
                 ux,uy,uz = forward.mctigue(X_sar, Y_sar, **unknowns)
             if(type_sorg == 2):
-                ux,uy,uz = forward.penny(  X_sar, Y_sar, **unknowns)
+                ux,uy,uz = forward.fialko( X_sar, Y_sar, **unknowns)
             if(type_sorg == 3):
                 ux,uy,uz = forward.yang(   X_sar, Y_sar, **unknowns)
             if(type_sorg == 4):
@@ -723,7 +723,7 @@ def synth(params):
             if(type_sorg == 1):
                 ux,uy,uz = forward.mctigue(X_gps, Y_gps, **unknowns)
             if(type_sorg == 2):
-                ux,uy,uz = forward.penny(  X_gps, Y_gps, **unknowns)
+                ux,uy,uz = forward.fialko( X_gps, Y_gps, **unknowns)
             if(type_sorg == 3):
                 ux,uy,uz = forward.yang(   X_gps, Y_gps, **unknowns)
             if(type_sorg == 4):
@@ -741,7 +741,7 @@ def synth(params):
             if(type_sorg == 1):
                 ux,uy,uz = forward.mctigue(X_lev, Y_lev, **unknowns)
             if(type_sorg == 2):
-                ux,uy,uz = forward.penny(  X_lev, Y_lev, **unknowns)
+                ux,uy,uz = forward.fialko( X_lev, Y_lev, **unknowns)
             if(type_sorg == 3):
                 ux,uy,uz = forward.yang(   X_lev, Y_lev, **unknowns)
             if(type_sorg == 4):
@@ -763,8 +763,8 @@ def synth(params):
                 ux0,uy0,uz0 = forward.mctigue(X_edm0, Y_edm0, **unknowns)
                 ux1,uy1,uz1 = forward.mctigue(X_edm1, Y_edm1, **unknowns)
             if(type_sorg == 2):
-                ux0,uy0,uz0 = forward.penny(  X_edm0, Y_edm0, **unknowns)
-                ux1,uy1,uz1 = forward.penny(  X_edm1, Y_edm1, **unknowns)
+                ux0,uy0,uz0 = forward.fialko( X_edm0, Y_edm0, **unknowns)
+                ux1,uy1,uz1 = forward.fialko( X_edm1, Y_edm1, **unknowns)
             if(type_sorg == 3):
                 ux0,uy0,uz0 = forward.yang(   X_edm0, Y_edm0, **unknowns)
                 ux1,uy1,uz1 = forward.yang(   X_edm1, Y_edm1, **unknowns)
@@ -796,10 +796,10 @@ def synth(params):
                 uxpY,uypY,uzpY = forward.mctigue(X_tlt, Y_tlt+delta, **unknowns)
                 uxmY,uymY,uzmY = forward.mctigue(X_tlt, Y_tlt-delta, **unknowns)
             if(type_sorg == 2):
-                uxpX,uypX,uzpX = forward.penny(  X_tlt+delta, Y_tlt, **unknowns)
-                uxmX,uymX,uzmX = forward.penny(  X_tlt-delta, Y_tlt, **unknowns)
-                uxpY,uypY,uzpY = forward.penny(  X_tlt, Y_tlt+delta, **unknowns)
-                uxmY,uymY,uzmY = forward.penny(  X_tlt, Y_tlt-delta, **unknowns)
+                uxpX,uypX,uzpX = forward.fialko( X_tlt+delta, Y_tlt, **unknowns)
+                uxmX,uymX,uzmX = forward.fialko( X_tlt-delta, Y_tlt, **unknowns)
+                uxpY,uypY,uzpY = forward.fialko( X_tlt, Y_tlt+delta, **unknowns)
+                uxmY,uymY,uzmY = forward.fialko( X_tlt, Y_tlt-delta, **unknowns)
             if(type_sorg == 3):
                 uxpX,uypX,uzpX = forward.yang(   X_tlt+delta, Y_tlt, **unknowns)
                 uxmX,uymX,uzmX = forward.yang(   X_tlt-delta, Y_tlt, **unknowns)
@@ -833,10 +833,10 @@ def synth(params):
                 uxpY,uypY,uzpY = forward.mctigue(X_srn, Y_srn+delta, **unknowns)
                 uxmY,uymY,uzmY = forward.mctigue(X_srn, Y_srn-delta, **unknowns)
             if(type_sorg == 2):
-                uxpX,uypX,uzpX = forward.penny(  X_srn+delta, Y_srn, **unknowns)
-                uxmX,uymX,uzmX = forward.penny(  X_srn-delta, Y_srn, **unknowns)
-                uxpY,uypY,uzpY = forward.penny(  X_srn, Y_srn+delta, **unknowns)
-                uxmY,uymY,uzmY = forward.penny(  X_srn, Y_srn-delta, **unknowns)
+                uxpX,uypX,uzpX = forward.fialko( X_srn+delta, Y_srn, **unknowns)
+                uxmX,uymX,uzmX = forward.fialko( X_srn-delta, Y_srn, **unknowns)
+                uxpY,uypY,uzpY = forward.fialko( X_srn, Y_srn+delta, **unknowns)
+                uxmY,uymY,uzmY = forward.fialko( X_srn, Y_srn-delta, **unknowns)
             if(type_sorg == 3):
                 uxpX,uypX,uzpX = forward.yang(   X_srn+delta, Y_srn, **unknowns)
                 uxmX,uymX,uzmX = forward.yang(   X_srn-delta, Y_srn, **unknowns)
