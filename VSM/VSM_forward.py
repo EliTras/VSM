@@ -356,7 +356,7 @@ def mctigue(x,y,xcen,ycen,depth,radius,dP_mu,nu):
     uzbar = a_d**3*(1.-nu)*f1*(1 - c1*(0.5*(1+nu) - 3.75*(2.-nu)/(r*r+1.)))
     
     uz = uzbar*dP_mu*depth
-    ur = uzbar*dP_mu*depth*r
+    ur = uz*r
 
     ux, uy = pol2cart(th, ur)
         
