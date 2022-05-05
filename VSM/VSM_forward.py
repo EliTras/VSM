@@ -61,7 +61,7 @@ VSM - Version 1.0
 
     # DAVIS   by Davis (1986)
     # FIALKO  by Fialko et al. (2001)
-    # MCTIGUE by McTigue (1986)
+    # MCTIGUE by McTigue (1987)
     # MOGI    by Mogi (1958)
     # OKADA   by Okada (1985)
     # YANG    by Yang et al. (1988)
@@ -341,27 +341,25 @@ def INTGR(r, fi, psi, h, Wt, t):
 def mctigue(x,y,xcen,ycen,depth,radius,dP_mu,nu):
 
     # Center coordinate grid on point source
-    x = x - xcen
-    y = y - ycen
-
+    x2 = x - xcen
+    y2 = y - ycen
+    
     # Convert to surface cylindrical coordinates
-    th, rho = cart2pol(x,y)
+    th, rho = cart2pol(x2,y2)
     r = rho/depth
     
     # McTigue displacement calculation
-    R3 = (r**2 + 1.)**1.5
-    R5 = (r**2 + 1.)**2.5
+    r = rho/depth
     a_d = radius/depth
-    a_d3 = a_d**3
-    fact1 = (1.-nu) * (1.+nu)/(2.*(7. - 5.*nu))
-    fact2 = 15.*(2.-nu) * (1.-nu)/(4.*(7. - 5.*nu))
-    C = dP_mu * depth * a_d3
+    f1 = 1/(r*r + 1.)**1.5
+    c1 = a_d**3/(7.-5.*nu)
+    uzbar = a_d**3*(1.-nu)*f1*(1 - c1*(0.5*(1+nu) - 3.75*(2.-nu)/(r*r+1.)))
     
-    uz = C * (1.-nu)/R3 - C * a_d3*(fact1/R3) - C*a_d3*fact2/R5
-    ur = uz*r
+    uz = uzbar*dP_mu*depth
+    ur = uzbar*dP_mu*depth*r
 
     ux, uy = pol2cart(th, ur)
-
+        
     return np.array([ux,uy,uz])
 
 
@@ -371,11 +369,11 @@ def mctigue(x,y,xcen,ycen,depth,radius,dP_mu,nu):
 def mogi(x,y,xcen,ycen,depth,dVol,nu):
 
     # Center coordinate grid on point source
-    x = x - xcen
-    y = y - ycen
+    x2 = x - xcen
+    y2 = y - ycen
 
     # Convert to surface cylindrical coordinates
-    th, rho = cart2pol(x,y)
+    th, rho = cart2pol(x2,y2)
     R = np.hypot(depth,rho)
 
     # Mogi displacement calculation
