@@ -1027,7 +1027,7 @@ def my_bay_alg(samp1,samp2,samp3,excl=80,nbins=20):
 
     mean  = np.zeros(ndim)
     sigma = np.zeros(ndim)
-    print('\nMEAN PARAMETERS and associated SIGMA')
+    print('\nMEAN PARAMETERS and associated STANDARD DEVIATION')
     for i in range(ndim):
         mcmc = np.percentile(flat_samples[:, i], [16, 50, 84])
         mean[i] = mcmc[1]
@@ -1070,7 +1070,7 @@ def write_results(samples, truths, sigma=None, extra=None):
     chi2_final = na_obj(truths)
     print('\nTotal misfit of the optimal model {:10.4f}'.format(chi2_final))
 
-### Save best fit (NA) or mean model with 1-sigma (BO)
+### Save best fit (NA) or mean model with 1-sigma (BI)
     if(ch_opt == 0 and ndim != 0):
         filename_temp = os.path.join(fold_inout,'VSM_best.csv')
         hd=''
