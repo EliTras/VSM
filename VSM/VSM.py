@@ -923,7 +923,7 @@ def my_nei_alg(samp1,samp2,samp3):
     flat_samples = flat_samples.to_numpy()
     
     best = flat_samples[0,2:]
-    print('\nBEST PARAMETERS\n',best)
+    print('\nBEST-FIT PARAMETERS\n',best)
     
 ### Write results of NA    
     write_results(flat_samples[:,2:],
@@ -1027,7 +1027,7 @@ def my_bay_alg(samp1,samp2,samp3,excl=80,nbins=20):
 
     mean  = np.zeros(ndim)
     sigma = np.zeros(ndim)
-    print('\nMEAN PARAMETERS and associated STANDARD DEVIATION')
+    print('\nMEAN PARAMETERS and associated STANDARD DEVIATIONS')
     for i in range(ndim):
         mcmc = np.percentile(flat_samples[:, i], [16, 50, 84])
         mean[i] = mcmc[1]
