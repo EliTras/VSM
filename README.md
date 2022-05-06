@@ -22,8 +22,8 @@ Input data supported
 - strain
 
 Sampling algorithms
-- Global optimization algorithm based on the Voronoi cells (Neighbourhood Algorithm - NA)
-- Probabilistic approach to parameters estimation based on the Bayes theorem (Bayesian Inference - BI)
+- global optimization algorithm based on the Voronoi cells (Neighbourhood Algorithm - NA)
+- probabilistic approach to parameters estimation based on the Bayes theorem (Bayesian Inference - BI)
 
 VSM can be executed as Python script, in Jupyter Notebook environments or by its Graphical User Interface.
 Tests available at https://github.com/EliTras/VSM_test
