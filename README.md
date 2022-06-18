@@ -31,5 +31,5 @@ Tests sill2NA and sill2BI include Jupyter Notebooks also.
 
 For any enquires, please write to elisa.trasatti@ingv.it
 
-Cite as
-_Trasatti, E. (2022). "Volcanic and Seismic source Modelling (VSM). An Open Tool for Geodetic Data Modeling", Frontiers in Earth Science, doi: 10.3389/feart.2022.917222
+Cite as \
+Trasatti, E. (2022). "Volcanic and Seismic source Modelling (VSM). An Open Tool for Geodetic Data Modeling", Frontiers in Earth Science, doi: 10.3389/feart.2022.917222
