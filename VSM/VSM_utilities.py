@@ -75,8 +75,7 @@ def volume_var_yang(dpmu,s_axis_max,ratio):
     volume = 4./3.*np.pi*s_axis_max**3*ratio*ratio
     f = ratio*ratio/3. - 0.7*ratio + 1.37
     dVolume = volume*dpmu*3./4.*f
-    print('factor',f)
-    return dVolume,f
+    return dVolume
 
 def volume_var_penny(dpmu,r,nu):
     r3 = r**3
