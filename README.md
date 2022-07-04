@@ -26,7 +26,7 @@ Sampling algorithms
 - probabilistic approach to parameters estimation based on the Bayes theorem (Bayesian Inference - BI)
 
 VSM can be executed as Python script, in Jupyter Notebook environments or by its Graphical User Interface.
-Tests available at github.com/EliTras/VSM_test
+Tests available at https://github.com/EliTras/VSM_test
 Tests sill2NA and sill2BI include Jupyter Notebooks also.
 
 For any enquires, please write to elisa.trasatti@ingv.it
