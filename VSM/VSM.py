@@ -900,7 +900,7 @@ def na_obj(params):
     return func
 
 def my_nei_alg(samp1,samp2,samp3):
-    print('\nNEIGHBOURHOOD ALGORITM running...')
+    print('\nNEIGHBOURHOOD ALGORITHM running...')
     num_samp   = samp1
     num_resamp = samp2
     num_iter   = samp3
