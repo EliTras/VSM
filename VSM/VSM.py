@@ -109,8 +109,7 @@ def final_check():
     fguiin = open(ff_in, "w")
 
     fguiin.write(fold_inout+'\n')
-    
-    print('GUI',len(ff_sar),ff_sar)    
+     
     try:
         if len(ff_sar)<2:
             fguiin.write(ff_sar[0]+'\n')
