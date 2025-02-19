@@ -63,7 +63,8 @@ import emcee
 
 rcParams['pdf.fonttype'] = 42
 rcParams['ps.fonttype'] = 42
-plt.rcParams["font.family"] = "Calibri"
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams["font.sans-serif"] = ['Calibri'] + plt.rcParams['font.sans-serif']
 plt.rcParams.update({'font.size':14})
 
 # -----------------------------------------------------------------------------
