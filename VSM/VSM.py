@@ -13,7 +13,7 @@ VSM - Version 1.0
               And others for python codes (from GitHub and PyPI)
 
    Created:      2007 
-   Last update:  May 2022
+   Last update:  February 2025
 
    License:  E. Trasatti, covered by GNU-GPL License
 
