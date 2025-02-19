@@ -1387,7 +1387,10 @@ def plot_1D_2D(what, truths, labels,filename = None, skip = 50):
         print('\nPlotting 1D and 2D parameter marginals \n')
         
         fig2 = plt.figure(figsize=(14,14))
-        corner.corner(what[:-skip],truths=list(truths),fig= fig2,labels = labels)
+        if(ch_opt==0):
+            corner.corner(what[:-skip],truths=list(truths),fig= fig2,labels = labels)
+        if(ch_opt==1):
+            corner.corner(what[skip:],truths=list(truths),fig= fig2,labels = labels)
         
         if filename:
             plt.savefig(filename)
